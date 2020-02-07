@@ -12,7 +12,7 @@ public class PlayerMover : MonoBehaviour
 
     public Transform head;
     CharacterController controller;
-   
+
 
     float jumpVelocity;
 
@@ -27,25 +27,21 @@ public class PlayerMover : MonoBehaviour
         //Moves the player based on the input
         var fowardInput = Input.GetAxis("Vertical");
         var strafeInput = Input.GetAxis("Horizontal");
+        controller.Move(((transform.forward * fowardInput) + (transform.right * strafeInput)) * speed * Time.deltaTime);
+
         var rotateMovement = Input.GetAxis("Mouse X");
         var lookUpInput = -Input.GetAxis("Mouse Y");
-        
-        transform.Rotate(0,rotateMovement*Time.deltaTime*rotationSpeed, 0);
-        head.Rotate(lookUpInput * rotationSpeed * Time.deltaTime,0,0);
-        controller.Move(transform.forward * fowardInput * speed * Time.deltaTime);
-        controller.Move(transform.right * strafeInput * speed * Time.deltaTime);
+
+        transform.Rotate(0, rotateMovement * Time.deltaTime * rotationSpeed, 0);
+        head.Rotate(lookUpInput * rotationSpeed * Time.deltaTime, 0, 0);
+
 
         //Jumping is handled by keeping track of a velocity that represents whether the player is falling or jumping
         controller.Move(transform.up * jumpVelocity * Time.deltaTime);
+        jumpVelocity = (Input.GetKey(KeyCode.Space) && controller.isGrounded) ? jumpForce : jumpVelocity - gravityMult;
 
-        if (Input.GetKey(KeyCode.Space) && controller.isGrounded)
-        {
-            jumpVelocity = jumpForce;
-        }
-        else
-        {
-            jumpVelocity -= gravityMult;
-        }
+
+
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
