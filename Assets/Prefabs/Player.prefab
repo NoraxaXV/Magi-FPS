@@ -105,7 +105,6 @@ GameObject:
   - component: {fileID: 638200632}
   - component: {fileID: 638200635}
   - component: {fileID: 638200634}
-  - component: {fileID: 638200633}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -174,20 +173,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &638200633
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 638200631}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1662318052
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +308,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &4350412216930941133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,8 +323,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   rotationSpeed: 180
-  gravityMult: 2
-  jumpForce: 40
+  gravityMult: 1
+  jumpForce: 50
   head: {fileID: 8741897}
 --- !u!114 &3943979528614343972
 MonoBehaviour:
@@ -353,6 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 594897cb76e5c6b47924c36907c52217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootingSpeed: 0.1
 --- !u!95 &649674223
 Animator:
   serializedVersion: 3
@@ -366,7 +352,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: bcd9fd487b0468942a001be5f2c636e2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1

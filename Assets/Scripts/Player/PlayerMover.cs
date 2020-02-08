@@ -11,6 +11,8 @@ public class PlayerMover : MonoBehaviour
     public float jumpForce = 20;
 
     public Transform head;
+
+    Vector3 lastVelocity;
     CharacterController controller;
 
 
@@ -20,14 +22,20 @@ public class PlayerMover : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
+        lastVelocity = new Vector3();
     }
 
     private void Update()
     {
-        //Moves the player based on the input
-        var fowardInput = Input.GetAxis("Vertical");
-        var strafeInput = Input.GetAxis("Horizontal");
-        controller.Move(((transform.forward * fowardInput) + (transform.right * strafeInput)) * speed * Time.deltaTime);
+        if (controller.isGrounded) {
+            //Moves the player based on the input
+            var fowardInput = Input.GetAxis("Vertical");
+            var strafeInput = Input.GetAxis("Horizontal");
+            lastVelocity = ((transform.forward * fowardInput) + (transform.right * strafeInput)) * speed * Time.deltaTime;
+            
+        }
+
+        controller.Move(lastVelocity);
 
         var rotateMovement = Input.GetAxis("Mouse X");
         var lookUpInput = -Input.GetAxis("Mouse Y");
@@ -38,7 +46,7 @@ public class PlayerMover : MonoBehaviour
 
         //Jumping is handled by keeping track of a velocity that represents whether the player is falling or jumping
         controller.Move(transform.up * jumpVelocity * Time.deltaTime);
-        jumpVelocity = (Input.GetKey(KeyCode.Space) && controller.isGrounded) ? jumpForce : jumpVelocity - gravityMult;
+        jumpVelocity = (Input.GetKey(KeyCode.Space) && controller.isGrounded) ? jumpForce : (jumpVelocity - gravityMult);
 
 
 
