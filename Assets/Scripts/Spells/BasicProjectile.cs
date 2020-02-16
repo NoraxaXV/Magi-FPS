@@ -7,6 +7,7 @@ public class BasicProjectile : MonoBehaviour
 {
     public float speed = 1;
     public float maxLifetime = 10;
+    public GameObject explodePrefab;
 
     [HideInInspector] public GameObject player;
     Rigidbody rb;
@@ -26,6 +27,7 @@ public class BasicProjectile : MonoBehaviour
     }
     public void OnCollisionEnter(Collision collision)
     {
+        Instantiate(explodePrefab, transform.position, transform.rotation, null);
         Destroy(gameObject);
     }
 }
