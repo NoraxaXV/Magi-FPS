@@ -21,10 +21,8 @@ public class PlayerShooter : MonoBehaviour
         if (Input.GetButton("Fire1"))
         {
             anim.SetBool("Preping", true);
-            anim.speed = 1 / shootingSpeed;
         }
         else {
-            anim.speed = 1;
             anim.SetBool("Preping", false);
         }
 
@@ -34,7 +32,6 @@ public class PlayerShooter : MonoBehaviour
 
     public void Fire()
     {
-        Debug.Log("Fired");
         Instantiate(spellPrefab, spellSpawnPoint.position, spellSpawnPoint.rotation);
     }
 }
