@@ -1,0 +1,188 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4082381965648877630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0045a420c8b2b474eb4c14cf512c1cb5, type: 3}
+  m_Name: creature_GameItem_Detail_Stat
+  m_EditorClassIdentifier: 
+  m_DefaultKeyList: 
+  m_DefaultValueList: []
+  m_StatDefaultIntValues_Keys: 
+  m_StatDefaultIntValues_Values: 
+  m_StatDefaultFloatValues_Keys: 
+  m_StatDefaultFloatValues_Values: []
+--- !u!114 &-1561860643901320501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a121bc2d8644fcb8f5f5ed98363908, type: 3}
+  m_Name: wallet_Inventory
+  m_EditorClassIdentifier: 
+  m_DisplayName: Wallet
+  m_Id: wallet
+  m_ReferenceDefinition: {fileID: 0}
+  m_CategoryHashes: 
+  m_CategoryIds: []
+  m_DetailDefinitionValues: []
+  m_DefaultItems: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d6d794703b5406883240f543e5b084, type: 3}
+  m_Name: Magi-FPS Item Database
+  m_EditorClassIdentifier: 
+  m_GameItemCatalog: {fileID: 2583969439746060235}
+  m_InventoryCatalog: {fileID: 41812251140412417}
+  m_StatCatalog: {fileID: 5811113425347898465}
+--- !u!114 &41812251140412417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b084f2c338a4185ab8badeed2a3947, type: 3}
+  m_Name: _Catalog_Inventories
+  m_EditorClassIdentifier: 
+  m_Categories: []
+  m_CollectionDefinitions:
+  - {fileID: 5958080681874575816}
+  - {fileID: -1561860643901320501}
+  m_ItemDefinitions:
+  - {fileID: 1954683887270743922}
+  m_DefaultCollectionDefinitions: []
+--- !u!114 &1954683887270743922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbd052539327467295d2009d33aa660, type: 3}
+  m_Name: pips_InventoryItem
+  m_EditorClassIdentifier: 
+  m_DisplayName: Pips
+  m_Id: pips
+  m_ReferenceDefinition: {fileID: 0}
+  m_CategoryHashes: 
+  m_CategoryIds: []
+  m_DetailDefinitionValues:
+  - {fileID: 3769897528816344813}
+  - {fileID: 7594463723740890751}
+--- !u!114 &2583969439746060235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7bd278f724ab94d891fb484af87b44, type: 3}
+  m_Name: _Catalog_GameItems
+  m_EditorClassIdentifier: 
+  m_Categories: []
+  m_Definitions:
+  - {fileID: 5408221162597572817}
+--- !u!114 &3769897528816344813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad1838c60d074d51ad3002c9f025f98, type: 3}
+  m_Name: pips_InventoryItem_Detail_Currency
+  m_EditorClassIdentifier: 
+  m_CurrencyType: 0
+  m_CurrencySubType: 0
+--- !u!114 &5408221162597572817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dbf3f8defcf78f428d1448085483eff, type: 3}
+  m_Name: creature_GameItem
+  m_EditorClassIdentifier: 
+  m_DisplayName: Creature
+  m_Id: creature
+  m_ReferenceDefinition: {fileID: 0}
+  m_CategoryHashes: 
+  m_CategoryIds: []
+  m_DetailDefinitionValues:
+  - {fileID: -4082381965648877630}
+--- !u!114 &5811113425347898465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b88f5bccd054f984d9be6ad05294da40, type: 3}
+  m_Name: _Catalog_Stats
+  m_EditorClassIdentifier: 
+  m_StatDefinitions:
+  - m_Id: health
+    m_DisplayName: Health
+    m_StatValueType: 0
+--- !u!114 &5958080681874575816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a121bc2d8644fcb8f5f5ed98363908, type: 3}
+  m_Name: main_Inventory
+  m_EditorClassIdentifier: 
+  m_DisplayName: Main
+  m_Id: main
+  m_ReferenceDefinition: {fileID: 0}
+  m_CategoryHashes: 
+  m_CategoryIds: []
+  m_DetailDefinitionValues: []
+  m_DefaultItems: []
+--- !u!114 &7594463723740890751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15cb36b4e39d04058878d632b15e1f5b, type: 3}
+  m_Name: pips_InventoryItem_Detail_Analytics
+  m_EditorClassIdentifier: 
