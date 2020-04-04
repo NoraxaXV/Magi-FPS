@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0045a420c8b2b474eb4c14cf512c1cb5, type: 3}
   m_Name: creature_GameItem_Detail_Stat
   m_EditorClassIdentifier: 
-  m_DefaultKeyList: 
-  m_DefaultValueList: []
+  m_DefaultKeyList: 1323dace
+  m_DefaultValueList:
+  - type: 1
+    intValue: 1120403456
   m_StatDefaultIntValues_Keys: 
   m_StatDefaultIntValues_Values: 
   m_StatDefaultFloatValues_Keys: 
@@ -154,7 +156,7 @@ MonoBehaviour:
   m_StatDefinitions:
   - m_Id: health
     m_DisplayName: Health
-    m_StatValueType: 0
+    m_StatValueType: 1
 --- !u!114 &5958080681874575816
 MonoBehaviour:
   m_ObjectHideFlags: 0

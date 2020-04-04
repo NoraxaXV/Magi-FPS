@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Billboard : MonoBehaviour
 {
+    [SerializeField] bool reverse = false;
     Transform cam;
     // Start is called before the first frame update
     void Start()
@@ -15,5 +16,6 @@ public class Billboard : MonoBehaviour
     void Update()
     {
         transform.LookAt(cam);
+        if (reverse) transform.forward = -transform.forward;
     }
 }

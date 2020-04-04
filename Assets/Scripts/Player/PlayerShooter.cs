@@ -11,6 +11,9 @@ public class PlayerShooter : MonoBehaviour
     public Transform spellSpawnPoint;
 
     Animator anim;
+
+    bool isPreping = false;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -18,15 +21,15 @@ public class PlayerShooter : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButton("Fire1"))
+        isPreping = Input.GetButton("Fire1");
+
+        if (Input.GetButtonUp("Fire1"))
         {
-            anim.SetBool("Preping", true);
-        }
-        else {
-            anim.SetBool("Preping", false);
+            anim.SetTrigger("Fired");
+            isPreping = false;
         }
 
-        if (Input.GetButtonUp("Fire1")) anim.SetTrigger("Fired");
+        anim.SetBool("Preping", isPreping);
     }
 
 
