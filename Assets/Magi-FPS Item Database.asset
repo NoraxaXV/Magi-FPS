@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7095319025449727283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42737dc928f7f4b5eb753f03c1012a5e, type: 3}
+  m_Name: creature_GameItem_Detail_AudioClipAssets
+  m_EditorClassIdentifier: 
+  m_Names:
+  - OnDie
+  - OnHit
+  m_Values:
+  - {fileID: 8300000, guid: 8fc34a0496fda214aa409822738d7064, type: 3}
+  - {fileID: 8300000, guid: f5d8fc3d742519849b4f71dbb2126dd6, type: 3}
 --- !u!114 &-4082381965648877630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +159,7 @@ MonoBehaviour:
   m_CategoryIds: []
   m_DetailDefinitionValues:
   - {fileID: -4082381965648877630}
+  - {fileID: -7095319025449727283}
 --- !u!114 &5811113425347898465
 MonoBehaviour:
   m_ObjectHideFlags: 0
